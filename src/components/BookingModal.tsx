@@ -55,7 +55,7 @@ export function BookingModal({ onClose, business }: BookingModalProps) {
     }
 
     const encodedMessage = encodeURIComponent(message);
-    window.open(`https://wa.me/248?text=${encodedMessage}`, '_blank');
+    window.open(`https://wa.me/2482747214?text=${encodedMessage}`, '_blank');
     
     setSubmitted(true);
     setTimeout(onClose, 1500);

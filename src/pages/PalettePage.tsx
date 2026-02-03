@@ -2,12 +2,13 @@ import { Link } from 'react-router-dom';
 import { Crown, ArrowLeft, MessageCircle, Calendar } from 'lucide-react';
 import { useState } from 'react';
 import { BookingModal } from '../components/BookingModal';
+import { SocialLinks } from '../components/SocialLinks';
 
 export function PalettePage() {
   const [showBooking, setShowBooking] = useState(false);
 
   const handleWhatsApp = () => {
-    window.open('https://wa.me/248?text=Hello%20Lioness%20Palette%21%20I%20would%20like%20to%20inquire%20about%20your%20charcuterie%20platters.', '_blank');
+    window.open('https://wa.me/2482747214?text=Hello%20Lioness%20Palette%21%20I%20would%20like%20to%20inquire%20about%20your%20charcuterie%20platters.', '_blank');
   };
 
   return (
@@ -22,7 +23,14 @@ export function PalettePage() {
               <span className="text-2xl font-bold text-amber-400">Lioness</span>
             </div>
           </Link>
-          <span className="text-amber-200 font-semibold">Palette</span>
+          <div className="flex items-center gap-4">
+            <SocialLinks
+              facebookUrl="https://www.facebook.com/lionesspalette"
+              instagramUrl="https://www.instagram.com/lionesspalette101"
+              tiktokUrl="https://www.tiktok.com"
+            />
+            <span className="text-amber-200 font-semibold">Palette</span>
+          </div>
         </div>
       </nav>
 
@@ -39,6 +47,16 @@ export function PalettePage() {
             <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">
               Lioness <span className="text-amber-400">Palette</span>
             </h1>
+            
+            {/* Hero Image */}
+            <div className="mb-8 rounded-xl overflow-hidden border border-amber-900/50 h-96 w-full">
+              <img 
+                src="https://images.unsplash.com/photo-1608198093002-ad4e003b8f6f?w=1200&q=90"
+                alt="Premium Charcuterie Platter"
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+            
             <p className="text-xl text-amber-200 mb-4">Artisan Charcuterie & Gourmet Platters</p>
             <p className="text-gray-400 max-w-2xl mx-auto mb-8">
               Experience curated selections of premium charcuterie, artisanal cheeses, and exquisite accompaniments—handcrafted for your most refined celebrations and intimate gatherings.
@@ -60,6 +78,37 @@ export function PalettePage() {
                 <MessageCircle className="w-5 h-5" />
                 WhatsApp Inquiry
               </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Gallery Section */}
+      <section className="py-16 px-6 bg-gradient-to-b from-transparent via-amber-950/5 to-transparent">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-amber-400 mb-12 text-center">Our Collections</h2>
+          
+          <div className="grid md:grid-cols-3 gap-6 mb-16">
+            <div className="rounded-lg overflow-hidden border border-amber-900/50 h-64 group cursor-pointer">
+              <img 
+                src="https://images.unsplash.com/photo-1595587990068-8d3f3e5c6a7f?w=600&q=90"
+                alt="Classic Elegance Platter"
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+              />
+            </div>
+            <div className="rounded-lg overflow-hidden border border-amber-900/50 h-64 group cursor-pointer">
+              <img 
+                src="https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?w=600&q=90"
+                alt="Luxury Collection Platter"
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+              />
+            </div>
+            <div className="rounded-lg overflow-hidden border border-amber-900/50 h-64 group cursor-pointer">
+              <img 
+                src="https://images.unsplash.com/photo-1535958636474-b021ee887b13?w=600&q=90"
+                alt="Custom Bespoke Platter"
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+              />
             </div>
           </div>
         </div>

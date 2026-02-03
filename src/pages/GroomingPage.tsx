@@ -2,12 +2,13 @@ import { Link } from 'react-router-dom';
 import { Crown, ArrowLeft, MessageCircle, Calendar } from 'lucide-react';
 import { useState } from 'react';
 import { BookingModal } from '../components/BookingModal';
+import { SocialLinks } from '../components/SocialLinks';
 
 export function GroomingPage() {
   const [showBooking, setShowBooking] = useState(false);
 
   const handleWhatsApp = () => {
-    window.open('https://wa.me/248?text=Hello%20Lioness%20Pet%27s%20Grooming%21%20I%20would%20like%20to%20book%20a%20grooming%20appointment.', '_blank');
+    window.open('https://wa.me/2482747214?text=Hello%20Lioness%20Pet%27s%20Grooming%21%20I%20would%20like%20to%20book%20a%20grooming%20appointment.', '_blank');
   };
 
   return (
@@ -22,7 +23,14 @@ export function GroomingPage() {
               <span className="text-2xl font-bold text-amber-400">Lioness</span>
             </div>
           </Link>
-          <span className="text-amber-200 font-semibold">Pet's Grooming</span>
+          <div className="flex items-center gap-4">
+            <SocialLinks
+              facebookUrl="https://www.facebook.com/profile.php?id=61552088970070"
+              instagramUrl="https://www.instagram.com/lioness_pets_grooming"
+              tiktokUrl="https://www.tiktok.com"
+            />
+            <span className="text-amber-200 font-semibold">Pet's Grooming</span>
+          </div>
         </div>
       </nav>
 
@@ -39,6 +47,16 @@ export function GroomingPage() {
             <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">
               Lioness <span className="text-amber-400">Pet's Grooming</span>
             </h1>
+            
+            {/* Hero Image */}
+            <div className="mb-8 rounded-xl overflow-hidden border border-amber-900/50 h-96 w-full">
+              <img 
+                src="https://images.unsplash.com/photo-1558788353-f76d92427f16?w=1200&q=90"
+                alt="Professional Pet Grooming"
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+            
             <p className="text-xl text-amber-200 mb-4">Luxury Care for Your Beloved Companions</p>
             <p className="text-gray-400 max-w-2xl mx-auto mb-8">
               Professional grooming services tailored to every breed and coat type. We combine expertise, patience, and luxury care to ensure your pets feel pampered and look their absolute best.
@@ -60,6 +78,37 @@ export function GroomingPage() {
                 <MessageCircle className="w-5 h-5" />
                 WhatsApp Inquiry
               </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Gallery Section */}
+      <section className="py-16 px-6 bg-gradient-to-b from-transparent via-amber-950/5 to-transparent">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-amber-400 mb-12 text-center">Our Care Gallery</h2>
+          
+          <div className="grid md:grid-cols-3 gap-6 mb-16">
+            <div className="rounded-lg overflow-hidden border border-amber-900/50 h-64 group cursor-pointer">
+              <img 
+                src="https://images.unsplash.com/photo-1558788353-f76d92427f16?w=600&q=90"
+                alt="Professional Bath & Grooming"
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+              />
+            </div>
+            <div className="rounded-lg overflow-hidden border border-amber-900/50 h-64 group cursor-pointer">
+              <img 
+                src="https://images.unsplash.com/photo-1576754459f1-b4202c59c1df?w=600&q=90"
+                alt="Spa Pampering Treatment"
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+              />
+            </div>
+            <div className="rounded-lg overflow-hidden border border-amber-900/50 h-64 group cursor-pointer">
+              <img 
+                src="https://images.unsplash.com/photo-1611003228941-98852ba62227?w=600&q=90"
+                alt="Specialized Pet Care"
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+              />
             </div>
           </div>
         </div>

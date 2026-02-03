@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Crown, Utensils, PawPrint } from 'lucide-react';
+import { SocialLinks } from '../components/SocialLinks';
 
 export function HomePage() {
   return (
@@ -11,7 +12,14 @@ export function HomePage() {
             <Crown className="w-8 h-8 text-amber-400" />
             <span className="text-2xl font-bold text-amber-400">Lioness</span>
           </div>
-          <span className="text-sm text-amber-200">Seychelles</span>
+          <div className="flex items-center gap-4">
+            <SocialLinks
+              facebookUrl="https://www.facebook.com/lionesspalette"
+              instagramUrl="https://www.instagram.com/lionesspalette101"
+              tiktokUrl="https://www.tiktok.com"
+            />
+            <span className="text-sm text-amber-200">Seychelles</span>
+          </div>
         </div>
       </nav>
 
@@ -37,6 +45,14 @@ export function HomePage() {
             {/* Palette Card */}
             <Link to="/palette" className="group">
               <div className="relative h-96 rounded-xl overflow-hidden bg-gradient-to-b from-amber-950 to-slate-900 border border-amber-900/50 hover:border-amber-600/80 transition-all duration-300 cursor-pointer hover:shadow-2xl hover:shadow-amber-900/50">
+                {/* Background Image */}
+                <div 
+                  className="absolute inset-0 bg-cover bg-center opacity-25 group-hover:opacity-40 transition-opacity duration-300"
+                  style={{
+                    backgroundImage: 'url("https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&q=80")'
+                  }}
+                ></div>
+                
                 {/* Background accent */}
                 <div className="absolute inset-0 bg-gradient-to-br from-amber-600/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 
@@ -63,6 +79,14 @@ export function HomePage() {
             {/* Grooming Card */}
             <Link to="/grooming" className="group">
               <div className="relative h-96 rounded-xl overflow-hidden bg-gradient-to-b from-amber-950 to-slate-900 border border-amber-900/50 hover:border-amber-600/80 transition-all duration-300 cursor-pointer hover:shadow-2xl hover:shadow-amber-900/50">
+                {/* Background Image */}
+                <div 
+                  className="absolute inset-0 bg-cover bg-center opacity-25 group-hover:opacity-40 transition-opacity duration-300"
+                  style={{
+                    backgroundImage: 'url("https://images.unsplash.com/photo-1558788353-f76d92427f16?w=800&q=80")'
+                  }}
+                ></div>
+                
                 {/* Background accent */}
                 <div className="absolute inset-0 bg-gradient-to-br from-amber-600/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 
